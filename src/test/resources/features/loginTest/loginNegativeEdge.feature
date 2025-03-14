@@ -13,10 +13,9 @@ Feature: Test Automation login negative & boundary
       | standard_user                | konoha                     |
 
 
-#  echo "# demo-cicd-saucedemo" >> README.md
-#  git init
-#  git add README.md
-#  git commit -m "first commit"
-#  git branch -M main
-#  git remote add origin https://github.com/dodi-wan/demo-cicd-saucedemo.git
-#  git push -u origin main
+# git init
+#git add README.md
+#git commit -m "first commit"
+#git branch -M main
+#git remote add origin https://github.com/dodi-wan/test-cicd-saucedemo-automation.git
+#git push -u origin main
