@@ -45,7 +45,9 @@ jobs:
         chrome-version: stable
 
     - name: Run tests with Gradle
-      run: ./gradlew test
+      run: |
+        export DISPLAY=:99
+        ./gradlew test
 
     - name: Upload Test Report
       if: always() # jalan terus walau test gagal
