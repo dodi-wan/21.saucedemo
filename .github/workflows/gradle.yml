@@ -40,7 +40,9 @@ jobs:
       run: ./gradlew build
 
     - name: Setup Chrome
-      uses: browser-actions/setup-chrome@v1.7.3
+      uses: browser-actions/setup-chrome@v2.1.0
+      with:
+        chrome-version: stable
 
     - name: Run tests with Gradle
       run: ./gradlew test
@@ -51,6 +53,7 @@ jobs:
       with:
         name: test-report
         path: build/reports/tests/test
+
 
 
 
