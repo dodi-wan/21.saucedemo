@@ -38,3 +38,14 @@ jobs:
 
     - name: Run cucumber test
       run: ./gradlew
+
+    - name: Set permissions for gradlew
+      run: chmod +x ./gradlew
+
+    - name: Run tests with Gradle
+      run: ./gradlew build
+
+
+
+
+
