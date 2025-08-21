@@ -38,11 +38,6 @@ jobs:
       with:
         chrome-version: stable
 
-    - name: Setup ChromeDriver
-      uses: nanasess/setup-chromedriver@v2
-      with:
-        chromedriver-version: latest
-
     - name: Set permissions for gradlew
       run: chmod +x ./gradlew
 
