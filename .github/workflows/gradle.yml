@@ -45,6 +45,13 @@ jobs:
     - name: Set permissions for gradlew
       run: chmod +x ./gradlew
 
+    - name: Upload Gradle problem report
+      if: failure()
+      uses: actions/upload-artifact@v4
+      with:
+        name: gradle-problem-report
+        path: build/reports/problems/problems-report.html
+
     - name: Run tests with Gradle
       run: ./gradlew clean test
 
