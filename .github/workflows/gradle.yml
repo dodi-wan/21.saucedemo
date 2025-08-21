@@ -48,4 +48,11 @@ jobs:
     - name: Run cucumber test
       run: ./gradlew
 
+    - name: Upload Gradle problem report
+      if: failure()
+      uses: actions/upload-artifact@v4
+      with:
+        name: gradle-problem-report
+        path: build/reports/problems/problems-report.html
+
 
