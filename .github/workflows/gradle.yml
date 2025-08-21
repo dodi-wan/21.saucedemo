@@ -33,31 +33,19 @@ jobs:
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0
 
-    - name: Setup Chrome
-      uses: browser-actions/setup-chrome@v1
-      with:
-        chrome-version: stable
-
-    - name: Set permissions for gradlew
-      run: chmod +x ./gradlew
-
+    
     - name: Build with Gradle Wrapper
       run: ./gradlew build
-    
+  # setup browser chrome
     - name: Setup Chrome
       uses: browser-actions/setup-chrome@v1.7.3
-    
-    - name: Run tests with Gradle
-      run: ./gradlew build
-
+  
+ # setup gradlew
+    - name: Setup gradlew
+      run: chmod +x gradlew
+      
+#execute run gradle
     - name: Run cucumber test
       run: ./gradlew
-
-    - name: Upload Gradle problem report
-      if: failure()
-      uses: actions/upload-artifact@v4
-      with:
-        name: gradle-problem-report
-        path: build/reports/problems/problems-report.html
 
 
