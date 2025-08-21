@@ -88,36 +88,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.21.Tugas-Selenium-UI [:io.cucumber.core.cli.Main.main()].executor": "Run",
-    "Gradle.21.Tugas-Selenium-UI [dependencies].executor": "Run",
-    "Gradle.21.Tugas-Selenium-UI [filterTest].executor": "Run",
-    "Gradle.21.Tugas-Selenium-UI [smokeTest].executor": "Run",
-    "Gradle.21.Tugas-Selenium-UI [smoke].executor": "Run",
-    "Gradle.21.Tugas-Selenium-UI [test].executor": "Run",
-    "Gradle.21.Tugas-Selenium-UI.executor": "Run",
-    "Gradle.Build 21.Tugas-Selenium-UI.executor": "Run",
-    "Gradle.Build demoWagLabs.executor": "Run",
-    "Gradle.Download Sources.executor": "Run",
-    "Gradle.ExampleTest.asserTest.executor": "Run",
-    "Gradle.ExampleTest.executor": "Run",
-    "Gradle.Runner.executor": "Run",
-    "Gradle.demoWagLabs [:io.cucumber.core.cli.Main.main()].executor": "Run",
-    "Gradle.demoWagLabs [build].executor": "Run",
-    "Gradle.demoWagLabs [test].executor": "Run",
-    "Gradle.runTest.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Dodse/IdeaProjects/demoWagLabs/src/test/java",
-    "onboarding.tips.debug.path": "C:/Users/Dodse/IdeaProjects/demoWagLabs/src/main/java/org/com/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.23563218",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.21.Tugas-Selenium-UI [:io.cucumber.core.cli.Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.21.Tugas-Selenium-UI [dependencies].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.21.Tugas-Selenium-UI [filterTest].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.21.Tugas-Selenium-UI [smokeTest].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.21.Tugas-Selenium-UI [smoke].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.21.Tugas-Selenium-UI [test].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.21.Tugas-Selenium-UI.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build 21.Tugas-Selenium-UI.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build demoWagLabs.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ExampleTest.asserTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ExampleTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Runner.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.demoWagLabs [:io.cucumber.core.cli.Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.demoWagLabs [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.demoWagLabs [test].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.runTest.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Dodse/IdeaProjects/demoWagLabs/src/test/java&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Dodse/IdeaProjects/demoWagLabs/src/main/java/org/com/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.23563218&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Dodse\IdeaProjects\21.Tugas-Selenium-UI\src\test\resources\features\boundaryValue" />
