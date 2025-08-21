@@ -45,11 +45,11 @@ jobs:
       run: ./gradlew clean test
 
     - name: Upload Gradle problem report
-      if: failure()
+      if: always()
       uses: actions/upload-artifact@v4
       with:
         name: gradle-problem-report
-        path: build/reports/problems/problems-report.html
+        path: build/reports/tests/test
 
    
 
