@@ -35,9 +35,9 @@ jobs:
 
     - name: Build with Gradle Wrapper
       run: ./gradlew build
-
-    - name: Run cucumber test
-      run: ./gradlew
+    
+    - name: Setup Chrome
+      uses: browser-actions/setup-chrome@v1.7.3
 
     - name: Set permissions for gradlew
       run: chmod +x ./gradlew
@@ -45,7 +45,7 @@ jobs:
     - name: Run tests with Gradle
       run: ./gradlew build
 
-
-
+    - name: Run cucumber test
+      run: ./gradlew
 
 
