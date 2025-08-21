@@ -1,7 +1,11 @@
 Feature: Test Automation add product
 
+
+  Positive Test add product
+  click product, expected: the result on window can show shop cart 1 with circle red
+
+  @smokeAddProduct
   Scenario: add to cart
-    Given url sauce demo
     And input "standard_user" and "secret_sauce"
     Then click button login
     And click product

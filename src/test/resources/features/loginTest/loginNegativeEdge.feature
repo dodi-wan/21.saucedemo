@@ -3,7 +3,6 @@ Feature: Test Automation login negative & boundary
 
   @login
   Scenario Outline: login negative
-    Given url sauce demo
     And input "<Accepted usernames are>" and "<Password for all users>"
     Then click button login
     Given message ""

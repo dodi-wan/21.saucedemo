@@ -1,6 +1,8 @@
 plugins {
     id 'java'
+    id 'io.qameta.allure' version '2.12.0'
 }
+
 
 group = 'org.com'
 version = '1.0-SNAPSHOT'
@@ -9,36 +11,81 @@ repositories {
     mavenCentral()
 }
 
-dependencies {
-    testImplementation platform('org.junit:junit-bom:5.10.0')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
-
-
-//    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.12.0'
-//    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.12.0'
-//    testRuntimeOnly group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.12.0'
-
-
-
-    implementation group: 'io.cucumber', name: 'cucumber-java', version: '7.21.1'
-    testImplementation group: 'io.cucumber', name: 'cucumber-junit-platform-engine', version: '7.21.1'
-
-
-    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.28.0'
-
-    implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '5.9.3'
-
-
-    implementation group: 'net.java.dev.jna', name: 'jna', version: '5.16.0'
-
-
-    testImplementation 'org.junit.platform:junit-platform-suite:1.12.0'
-
-
-
-
+def allurVersion = "2.23.0"
+allure {
+    version.set('2.23.0')
 }
 
-test {
-    useJUnitPlatform()
+
+    dependencies {
+        testImplementation platform('org.junit:junit-bom:5.10.0')
+        testImplementation 'org.junit.jupiter:junit-jupiter'
+
+
+        implementation group: 'io.cucumber', name: 'cucumber-java', version: '7.21.1'
+        testImplementation group: 'io.cucumber', name: 'cucumber-junit-platform-engine', version: '7.21.1'
+
+
+        implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.34.0'
+
+        implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '5.9.3'
+
+
+        implementation group: 'net.java.dev.jna', name: 'jna', version: '5.16.0'
+
+
+        testImplementation 'org.junit.platform:junit-platform-suite:1.12.0'
+
+
+        //Allure report
+        testImplementation platform("io.qameta.allure:allure-bom:2.23.0")
+        testImplementation "io.qameta.allure:allure-junit5"
+
+    }
+
+
+//test ini berdasarkan tag dan menjalankannya di terminal misalnya; ./gradlew -Ptags=smoke
+//-P adalah project, tags variabel tagTest "tags" dan smoke adalah anotasi di cucumber
+tasks.withType(Test).configureEach {
+    useJUnitPlatform ()
+
+    def tagTest = project.findProperty("tags")?: ""
+    if (tagTest){
+        systemProperty 'cucumber.filter.tags', tagTest
+    }
+
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
 }
+
+
+
+
+tasks.register("smokeTest", Test){
+    description = 'Run test with tag smokeAddProduct'
+    group = 'feature add product'
+    useJUnitPlatform{
+        includeTags ('smokeAddProduct')
+    }
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
+
+tasks.register("filterTest", Test){
+    description = "Run test feature filter product name, price"
+    group = 'smoke'
+
+    testClassesDirs = sourceSets.test.output.classesDirs
+    classpath = sourceSets.test.runtimeClasspath
+
+    include "runnerTest/Runner.class"
+}
+
+
+
+
+
+
+
