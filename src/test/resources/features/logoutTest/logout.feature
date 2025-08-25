@@ -1,3 +1,6 @@
+
+
+@test
 Feature: Logout Automation
 
 
@@ -5,7 +8,7 @@ Feature: Logout Automation
     login on homepage then logout, Expected: success login the window show products then logout and window show
     login menu
 
-  @logout
+  @test
   Scenario: login then logout
     And input "standard_user" and "secret_sauce"
     Then click button login

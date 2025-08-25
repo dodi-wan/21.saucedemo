@@ -1,10 +1,13 @@
+
+
+@test
 Feature: Test Automation third party social media
 
 
   Description;
    social media can through link, Expected: click logo  social media the result window changed social media
 
-
+  @test
   Scenario: login then logout
     And input "standard_user" and "secret_sauce"
     Then click button login

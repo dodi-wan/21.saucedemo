@@ -1,3 +1,6 @@
+
+
+@test
 Feature: Test Automation remove add cart product
 
 
@@ -5,6 +8,7 @@ Feature: Test Automation remove add cart product
   1. can click feature add product, expected: text "Add to cart" will be change "Remove"
   2. can click feature can remove, expected: text "Remove" will be change "Add to cart"
 
+  @test
   Scenario: Remove product cart
     And input "standard_user" and "secret_sauce"
     Then click button login

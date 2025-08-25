@@ -1,3 +1,6 @@
+
+
+@test
 Feature: Login Automation
 
 
@@ -5,7 +8,7 @@ Feature: Login Automation
     Login with credential list on saucedemo; Expected: username standard_user, problem_user, performance_glitch_user,
     error_user, visual_user can login and locked_out_user cannot login
 
-  @smoke
+  @test
   Scenario Outline: login swag labs user credential
     And input "<Accepted usernames are>" and "<Password for all users>"
     Then click button login
@@ -18,7 +21,7 @@ Feature: Login Automation
       | visual_user                  | secret_sauce               |
 
 
-@smoke
+  @test
   Scenario: login username has been locked
 
       And input "locked_out_user" and "secret_sauce"

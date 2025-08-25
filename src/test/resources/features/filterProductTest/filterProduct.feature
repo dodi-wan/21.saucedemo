@@ -1,10 +1,13 @@
+
+
+@test
 Feature: Test Automation filter container product
 
 
   Description;
     feature filter product, Expected: can sort filter price product and alphabet name product
 
-@filter
+  @test
   Scenario: login then logout
     And input "standard_user" and "secret_sauce"
     Then click button login

@@ -1,3 +1,6 @@
+
+
+@test
 Feature: Test BVA username and password
 
 
@@ -6,7 +9,7 @@ Feature: Test BVA username and password
     boundary value input username max 21 character. Expected: if input username less 21 character
     message show "performance_glitch_user"
 
-
+  @test
   Scenario: BVA login username and password
     And input "error_use" and "secret_sauce"
     Then click button login

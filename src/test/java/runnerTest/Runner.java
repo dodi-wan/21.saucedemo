@@ -12,11 +12,12 @@ import static io.cucumber.junit.platform.engine.Constants.PLUGIN_PROPERTY_NAME;
 
 @Suite
 @IncludeEngines("cucumber")
+@IncludeTags("test")
 @SelectClasspathResource("features")
 @ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "org.com.stepdef, hooks")
-@ConfigurationParameter(key = FILTER_TAGS_PROPERTY_NAME, value = "@smoke") // Hanya menjalankan scenario dengan tag @Login
-//@ConfigurationParameter(key = io.cucumber.junit.platform.engine.Constants.EXECUTION_DRY_RUN_PROPERTY_NAME, value = "false") // Pastikan dijalankan, bukan hanya pengecekan
-@ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "pretty, html:target/api-report.html") // Laporan dalam format JSON
+//@ConfigurationParameter(key = FILTER_TAGS_PROPERTY_NAME, value = "@test") // Hanya menjalankan scenario dengan tag @Login
+@ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "pretty, io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm") // Laporan dalam format JSON
+@ConfigurationParameter(key = "allure.results.directory", value = "target/allure-results")
 
 public class Runner {
 }
