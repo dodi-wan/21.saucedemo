@@ -60,8 +60,6 @@ tasks.withType(Test).configureEach {
 }
 
 
-
-
 tasks.register("smokeTest", Test){
     description = 'Run test with tag smokeAddProduct'
     group = 'feature add product'
@@ -72,6 +70,7 @@ tasks.register("smokeTest", Test){
         events "passed", "skipped", "failed"
     }
 }
+
 
 tasks.register("filterTest", Test){
     description = "Run test feature filter product name, price"
