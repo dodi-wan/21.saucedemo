@@ -52,7 +52,7 @@ jobs:
 
     # 7. setup run test
     - name: Run Tests
-      run: ./gradlew clean test cucumber
+      run: ./gradlew clean test
 
     # 8. Generate Allure Report
     - name: Generate Allure Report
