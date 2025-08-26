@@ -28,7 +28,7 @@ public class Utility {
                 "--disable-popup-blocking",
                 "--disable-notification",
                 "--incognito",
-                "--headless-new",
+                "--headless=new",
                 "--disable-gpu");
 
         options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
