@@ -56,7 +56,7 @@ jobs:
 
     # 8. Generate Allure Report
     - name: Generate Allure Report
-      run: ./gradlew clean test allureAggregate
+      run: ./gradlew allureReport --clean
 
 
     # 9. upload problem report
