@@ -10,23 +10,16 @@ Feature: Test BVA username and password
     message show "performance_glitch_user"
 
   @test
-  Scenario: BVA login username and password
-    And input "error_use" and "secret_sauce"
+  Scenario Outline: BVA login username and password
+    And input "<Accepted usernames are>" and "<Password for all users>"
     Then click button login
-    Given message "Epic sadface: Username and password do not match any user in this service"
+    Given message "<message>"
 
+Examples:
+      | Accepted usernames are | Password for all users | message                                                                  |
+      | standard_use           | secret_sauce           | Epic sadface: Username and password do not match any user in this service|
+      |performance_glitch_userr| secret_sauce           | Epic sadface: Username and password do not match any user in this service|
+      | standard_user          | secret_sauc            | Epic sadface: Username and password do not match any user in this service|
+      | standard_user          | secret_saucer          | Epic sadface: Username and password do not match any user in this service|
+      |                        |                        | Epic sadface: Username is required                                       |
 
-  Scenario: BVA login username and password
-    And input "performance_glitch_userr" and "secret_sauce"
-    Then click button login
-    Given message "Epic sadface: Username and password do not match any user in this service"
-
-
-  Scenario: postal code
-    And input "standard_user" and "secret_sauce"
-    Then click button login
-    And click add to cart "Sauce Labs Backpack"
-    When see product at shopping cart
-    And the checkout button  is showed, click it
-    And the text First Name Last Name Postal Code "" is showed input it
-    Then click continue button

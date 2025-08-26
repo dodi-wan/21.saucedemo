@@ -25,9 +25,7 @@ public class Utility {
                 "--start-maximized", //tampilan window full
                 "--disable-popup-blocking",
                 "--disable-notification",
-                "--incognito",
-                "--headless=new",
-                "--disable-gpu");
+                "--incognito");
 
         options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
         WebDriverManager.chromedriver().setup();

@@ -12,10 +12,10 @@ import static io.cucumber.junit.platform.engine.Constants.PLUGIN_PROPERTY_NAME;
 
 @Suite
 @IncludeEngines("cucumber")
-@IncludeTags("test")
+@IncludeTags("order")
 @SelectClasspathResource("features")
 @ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "org.com.stepdef, hooks")
-//@ConfigurationParameter(key = FILTER_TAGS_PROPERTY_NAME, value = "@test") // Hanya menjalankan scenario dengan tag @Login
+//@ConfigurationParameter(key = FILTER_TAGS_PROPERTY_NAME, value = "@order") // Hanya menjalankan scenario dengan tag @Login
 @ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "pretty, io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm") // Laporan dalam format JSON
 @ConfigurationParameter(key = "allure.results.directory", value = "target/allure-results")
 

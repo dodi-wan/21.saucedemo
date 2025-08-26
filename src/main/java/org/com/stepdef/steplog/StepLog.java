@@ -31,4 +31,9 @@ public class StepLog {
     public void message(String error_message) {
         loginPage.message_button(error_message);
     }
+
+
+    @And("input {string} {string}")
+    public void input(String arg0, String arg1) {
+    }
 }
