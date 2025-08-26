@@ -29,7 +29,9 @@ public class Utility {
                 "--disable-notification",
                 "--incognito",
                 "--headless=new",
-                "--disable-gpu");
+                "--disable-gpu",
+                "--disable-software-rasterizer",
+                "--window-size=1920,1080");
 
         options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
         WebDriverManager.chromedriver().setup();

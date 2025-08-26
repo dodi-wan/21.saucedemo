@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'io.qameta.allure' version '2.12.0'
 }
 
 
@@ -10,10 +11,10 @@ repositories {
     mavenCentral()
 }
 
-//def allurVersion = "2.23.0"
-//allure {
-//    version.set('2.23.0')
-//}
+def allurVersion = "2.23.0"
+allure {
+    version.set('2.23.0')
+}
 
 
     dependencies {
