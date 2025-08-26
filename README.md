@@ -51,6 +51,12 @@
 - create a test thinking like an end user
 - seperate every single test scenario
 - running test with single a .java class
-- allure report not only failed and pass, the report how to report give big picture and paths test scenario.
-- github action push project
+
+### Test
+- in terminal:
+  - ./gradlew test
+  - ./gradlew allureReport
+  - ./gradlew allureServe
+- github CI action push project
+
 
