@@ -1,8 +1,10 @@
+
+@test
 Feature: order without product
 
 
 
-@order
+@test
 Scenario: Test checkout without product
 And input "standard_user" and "secret_sauce"
 Then click button login

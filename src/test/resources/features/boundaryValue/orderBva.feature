@@ -1,7 +1,8 @@
 
-
+@test
 Feature: no input postal code
 
+@test
 Scenario: postal code
 And input "standard_user" and "secret_sauce"
 Then click button login
