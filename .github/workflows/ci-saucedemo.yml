@@ -5,7 +5,7 @@
 # This workflow will build a Java project with Gradle and cache/restore any dependencies to improve the workflow execution time
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-gradle
 
-name: Java CI with Gradle
+name: CI pipeline saucedemo
 
 on:
   push:
@@ -15,7 +15,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -52,21 +51,14 @@ jobs:
         chrome-version: stable
 
     # 7. setup run test
-    - name: Run tests with Gradle
-      run: |
-        export DISPLAY=:99
-        ./gradlew test
+    - name: Run Tests
+      run: ./gradlew clean test -Denv=staging
 
     # 8. Generate Allure Report
     - name: Generate Allure Report
       run: ./gradlew allureReport --clean
 
-    # - name: Upload Test Report
-    #   if: always() # jalan terus walau test gagal
-    #   uses: actions/upload-artifact@v4
-    #   with:
-    #     name: test-report
-    #     path: build/reports/tests/test
+
 
 
 
