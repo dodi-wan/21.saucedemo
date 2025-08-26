@@ -52,11 +52,14 @@
 - seperate every single test scenario
 - running test with single a .java class
 
+
+
 ### Test
+- git clone https://github.com/dodi-wan/21.saucedemo.git
+- cd repo-name (21.saucedemo)
 - in terminal:
   - ./gradlew test
   - ./gradlew allureReport
   - ./gradlew allureServe
-- github CI action push project
 
 
