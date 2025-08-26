@@ -30,9 +30,10 @@ allure {
         implementation group: 'net.java.dev.jna', name: 'jna', version: '5.16.0'
 
 
-        testImplementation platform("io.qameta.allure:allure-bom:2.20.1")
-        testImplementation 'io.qameta.allure:allure-junit5:2.20.1'
-        testImplementation 'io.qameta.allure:allure-cucumber-jvm:2.20.1'
+
+        implementation 'io.qameta.allure:allure-bom:2.29.1'
+        testImplementation 'io.qameta.allure:allure-junit5:2.29.1'
+        implementation 'io.qameta.allure:allure-cucumber7-jvm:2.29.1'
 
     }
 
