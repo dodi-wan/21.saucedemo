@@ -18,15 +18,7 @@ public class Utility {
     public static void run_driver () {
         ChromeOptions options = new ChromeOptions();
 
-//        Map<String, Object> prefs = new HashMap<>();
-//        prefs.put("credentials_enable_service", false);
-//        prefs.put("profile.password_manager_enabled", false);
-//
-//        options.setExperimentalOption("prefs", prefs);
-
-//        String userDataDir = System.getProperty("java.io.tmpdir") + "/chrome-user-data-" + System.currentTimeMillis();
         options.addArguments(
-//                "--user-data-dir=" + userDataDir,
                 "--no-sandbox", //merupakan bukan versi beta atau no bug
                 "--disable-dev-shm-usage", //tujuannya agar memory di browser (chrome) tidak crash khususnya di ci/cd
                 "--remote-allow-origin=*", //dapat di akses dengan mudah karena situs belajar & tidak cocok untuk production
@@ -37,12 +29,12 @@ public class Utility {
                 "--headless=new",
                 "--disable-gpu");
 
-
         options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
+
 
     public void close_driver () {
         if (driver != null) { //statement bahwa driver tidak null
