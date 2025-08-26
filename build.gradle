@@ -37,42 +37,12 @@ allure {
     }
 
 
-//test ini berdasarkan tag dan menjalankannya di terminal misalnya; ./gradlew -Ptags=smoke
-//-P adalah project, tags variabel tagTest "test" dan test adalah anotasi di cucumber
-tasks.withType(Test).configureEach {
-    useJUnitPlatform ()
-
-    def tagTest = project.findProperty("test")?: ""
-    if (tagTest){
-        systemProperty 'cucumber.filter.tags', tagTest
-    }
-
+//in terminal ./gradlew test
+test {
+    useJUnitPlatform()
     testLogging {
         events "passed", "skipped", "failed"
     }
-}
-
-
-tasks.register("smokeTest", Test){
-    description = 'Run test with tag smokeAddProduct'
-    group = 'feature add product'
-    useJUnitPlatform{
-        includeTags ('smokeAddProduct')
-    }
-    testLogging {
-        events "passed", "skipped", "failed"
-    }
-}
-
-
-tasks.register("filterTest", Test){
-    description = "Run test feature filter product name, price"
-    group = 'smoke'
-
-    testClassesDirs = sourceSets.test.output.classesDirs
-    classpath = sourceSets.test.runtimeClasspath
-
-    include "runnerTest/Runner.class"
 }
 
 
