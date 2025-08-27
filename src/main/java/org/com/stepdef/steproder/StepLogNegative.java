@@ -1,19 +1,19 @@
-package org.com.stepdef.negative;
+package org.com.stepdef.steproder;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
-import org.com.pages.AddProductPage;
-import org.com.pages.negative.CheckoutPage;
+import org.com.pages.addpage.AddProductPage;
+import org.com.pages.orderpage.OrderPage;
 
 public class StepLogNegative {
 
-    private org.com.pages.AddProductPage addProductPage;
-    private CheckoutPage checkoutPage;
+    private AddProductPage addProductPage;
+    private OrderPage checkoutPage;
 
 
     public StepLogNegative(){
         this.addProductPage = new AddProductPage();
-        this.checkoutPage = new CheckoutPage();
+        this.checkoutPage = new OrderPage();
     }
 
 
@@ -29,10 +29,11 @@ public class StepLogNegative {
     }
 
 
-    @And("the text First Name Last Name Postal Code {string} is showed input it")
-    public void theTextFirstNameLastNamePostalCodeIsShowedInputIt(String postalcode) {
-        checkoutPage.firstName();
-        checkoutPage.lastName();
+
+    @And("the text First Name {string} Last Name {string} Postal Code {string} is showed input it")
+    public void theTextFirstNameLastNamePostalCodeIsShowedInputIt(String firstname, String lastname, String postalcode) {
+        checkoutPage.firstName(firstname);
+        checkoutPage.lastName(lastname);
         checkoutPage.postalCode(postalcode);
     }
 
@@ -63,5 +64,7 @@ public class StepLogNegative {
     public void theResultIsShowedText(String finish) {
         checkoutPage.finishOrder();
     }
+
+
 }
 

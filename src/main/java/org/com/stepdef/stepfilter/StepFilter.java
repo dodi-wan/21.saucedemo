@@ -3,13 +3,13 @@ package org.com.stepdef.stepfilter;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.com.pages.FilterPage;
+import org.com.pages.filterpage.FilterPage;
 
 public class StepFilter {
 
 
 
-    private org.com.pages.FilterPage FilterPage;
+    private org.com.pages.filterpage.FilterPage FilterPage;
     public StepFilter() {
         this.FilterPage = new FilterPage();
     }

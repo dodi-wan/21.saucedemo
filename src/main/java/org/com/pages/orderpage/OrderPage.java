@@ -1,4 +1,4 @@
-package org.com.pages.negative;
+package org.com.pages.orderpage;
 
 
 import org.openqa.selenium.*;
@@ -10,7 +10,7 @@ import java.time.Duration;
 import static org.com.helper.Utility.driver;
 
 
-public class CheckoutPage {
+public class OrderPage {
 
 
     By remove_product = By.id("remove-sauce-labs-backpack");
@@ -51,13 +51,13 @@ public class CheckoutPage {
     }
 
 
-    public void firstName(){
-        driver.findElement(first_name).sendKeys("uzumaki");
+    public void firstName(String firstname){
+        driver.findElement(first_name).sendKeys(firstname);
     }
 
 
-    public void lastName() {
-        driver.findElement(last_name).sendKeys("naruto");
+    public void lastName(String lastname) {
+        driver.findElement(last_name).sendKeys(lastname);
     }
 
 

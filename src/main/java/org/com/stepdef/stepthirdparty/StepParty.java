@@ -3,12 +3,12 @@ package org.com.stepdef.stepthirdparty;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.com.pages.PartyPage;
+import org.com.pages.thirdpartypage.PartyPage;
 
 public class StepParty {
 
 
-    private org.com.pages.PartyPage PartyPage;
+    private org.com.pages.thirdpartypage.PartyPage PartyPage;
     public StepParty() {
         this.PartyPage = new PartyPage();
     }

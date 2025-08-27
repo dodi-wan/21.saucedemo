@@ -1,4 +1,4 @@
-package org.com.pages;
+package org.com.pages.logoutpage;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;

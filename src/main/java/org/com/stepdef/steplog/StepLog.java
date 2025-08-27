@@ -3,12 +3,12 @@ package org.com.stepdef.steplog;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import org.com.pages.LoginPage;
+import org.com.pages.loginpage.LoginPage;
 
 
 public class StepLog {
 
-   private org.com.pages.LoginPage loginPage;
+   private LoginPage loginPage;
 
    public StepLog() {
         loginPage =new LoginPage();

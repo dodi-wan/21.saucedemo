@@ -1,12 +1,12 @@
 package org.com.stepdef.stepremove;
 
 import io.cucumber.java.en.Then;
-import org.com.pages.RemovePage;
+import org.com.pages.removepage.RemovePage;
 
 public class StepRemove {
 
 
-    private org.com.pages.RemovePage RemovePage;
+    private org.com.pages.removepage.RemovePage RemovePage;
     public StepRemove() {
         this.RemovePage = new RemovePage();
     }

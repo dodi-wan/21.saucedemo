@@ -1,9 +1,8 @@
-package org.com.pages;
+package org.com.pages.loginpage;
 
 import org.openqa.selenium.By;
 
 import static org.com.helper.Utility.driver;
-import static org.com.helper.Utility.run_driver;
 
 
 public class LoginPage {

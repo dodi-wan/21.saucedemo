@@ -1,4 +1,4 @@
-package org.com.pages;
+package org.com.pages.thirdpartypage;
 
 import org.openqa.selenium.By;
 

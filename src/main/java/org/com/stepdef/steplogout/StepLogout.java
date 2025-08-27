@@ -2,13 +2,13 @@ package org.com.stepdef.steplogout;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
-import org.com.pages.LogoutPage;
+import org.com.pages.logoutpage.LogoutPage;
 
 public class StepLogout {
 
 
 
-    private org.com.pages.LogoutPage LogoutPage;
+    private org.com.pages.logoutpage.LogoutPage LogoutPage;
     public StepLogout() {
         this.LogoutPage =new LogoutPage();
     }

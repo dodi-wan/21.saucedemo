@@ -127,7 +127,7 @@
       <recent name="C:\Users\Dodse\IdeaProjects\demoWagLabs\src\test\resources\features\login" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Runner">
+  <component name="RunManager" selected="Cucumber Java.Scenario: postal code (1)">
     <configuration name="Scenario: BVA login username and password" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/boundaryValue/loginBva.feature" />
@@ -166,14 +166,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: login negative" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: postal code (1)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/loginTest/loginNegativeEdge.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/boundaryValue/orderBva.feature" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="21.Tugas-Selenium-UI.test" />
-      <option name="NAME_FILTER" value="^login negative$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^login negative$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: login negative" />
+      <option name="NAME_FILTER" value="^postal code$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^postal code$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: postal code" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -230,11 +230,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Scenario: postal code (1)" />
         <item itemvalue="Gradle.Runner" />
         <item itemvalue="Cucumber Java.Scenario: Test checkout without product" />
         <item itemvalue="Cucumber Java.Scenario: postal code" />
         <item itemvalue="Cucumber Java.Scenario: BVA login username and password" />
-        <item itemvalue="Cucumber Java.Scenario: login negative" />
       </list>
     </recent_temporary>
   </component>

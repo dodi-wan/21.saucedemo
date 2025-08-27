@@ -2,11 +2,11 @@ package org.com.stepdef.stepadd;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
-import org.com.pages.AddProductPage;
+import org.com.pages.addpage.AddProductPage;
 
 public class StepAdd {
 
-    private org.com.pages.AddProductPage AddProductPage;
+    private org.com.pages.addpage.AddProductPage AddProductPage;
 
     public StepAdd() {
         this.AddProductPage = new AddProductPage();

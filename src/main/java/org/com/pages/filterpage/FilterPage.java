@@ -1,4 +1,4 @@
-package org.com.pages;
+package org.com.pages.filterpage;
 
 import org.openqa.selenium.By;
 
