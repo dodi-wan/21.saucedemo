@@ -18,9 +18,9 @@ public class Utility {
     public static void run_driver () {
         ChromeOptions options = new ChromeOptions();
 
-        String userDataDir = System.getProperty("java.io.tmpdir") + "/chrome-user-data-" + System.currentTimeMillis();
+//        String userDataDir = System.getProperty("java.io.tmpdir") + "/chrome-user-data-" + System.currentTimeMillis();
         options.addArguments(
-                "--user-data-dir=" + userDataDir,
+//                "--user-data-dir=" + userDataDir,
                 "--no-sandbox", //merupakan bukan versi beta atau no bug
                 "--disable-dev-shm-usage", //tujuannya agar memory di browser (chrome) tidak crash khususnya di ci/cd
                 "--remote-allow-origin=*", //dapat di akses dengan mudah karena situs belajar & tidak cocok untuk production
