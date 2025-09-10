@@ -36,7 +36,7 @@
    | `src/test/resources/features`  | memebuat scenario secara terpisah dengan pendekatan seperti end-user bercerita layaknya kondisi aktual, jika a apakah outputnya a, atau b. seharusnya outputnya c tetaoi a dan sebagainya                                  |
    | `src/test/java/hooks`          | tujuannya untuk menjalankan kode sebelum dan sesudah atau seluruh suite test, agar clean dan terorganisir. seperti menyiapkan url, driver, close connection database dan test tidak terpengaruh dengan test sebelumnya    |
    | `src/test/java/runnerTest`     | untuk menjalankan test secara keseluruhan, per/scenario, beberapa test dengan anotasi. tujuannya untuk memberikan visual hasil test dan memberikan perintah untuk membuat report seperti; allure, cucumber json, html dan sebagainya. |
-   | `build.gradle`           | Konfigurasi, task run Gradle                   |
+   | `build.gradle`                 | depedensi konfigurasi Java, Junit, cucumber, web driver manager, selenium, allure and else                                                                                                                                                  |
 ```
 
 ### Setup & Run
