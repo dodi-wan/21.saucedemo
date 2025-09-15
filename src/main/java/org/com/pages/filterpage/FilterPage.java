@@ -24,7 +24,7 @@ public class FilterPage {
     By zAvalidate = By.xpath("//span[contains(text(),'Name (Z to A)')]");
 
     By sortPriceLohi = By.xpath("//option[contains (@value, 'lohi')]");
-    By loHiValidate = By.xpath("//span[contains(text(),'Price (low to high)')]");
+    By loHiValidate = By.xpath("(//span[@class='active_option'])[1]");
     By loHiPrice = By.xpath("//div[@class='inventory_list']//div[1]//div[2]//div[2]//div[1]");
     By loHiLastPrice = By.xpath("//*[@id='inventory_container']/div/div[6]/div[2]/div[2]/div");
 

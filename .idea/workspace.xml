@@ -127,7 +127,7 @@
       <recent name="C:\Users\Dodse\IdeaProjects\demoWagLabs\src\test\resources\features\login" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: Test Filter price high to low">
+  <component name="RunManager" selected="Gradle.Runner">
     <configuration name="Scenario: Remove product cart" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/removeProductTest/removeProduct.feature" />
@@ -230,9 +230,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Runner" />
         <item itemvalue="Cucumber Java.Scenario: Test Filter price high to low" />
         <item itemvalue="Cucumber Java.Scenario: Test Filter price low to high" />
-        <item itemvalue="Gradle.Runner" />
         <item itemvalue="Cucumber Java.Scenario: login swag labs user credential" />
         <item itemvalue="Cucumber Java.Scenario: Remove product cart" />
       </list>

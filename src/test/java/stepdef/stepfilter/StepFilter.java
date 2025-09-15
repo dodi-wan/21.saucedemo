@@ -78,7 +78,7 @@ public class StepFilter {
 
     @And("click price \\(low to high)")
     public void clickPriceLowToHigh() {
-        filterPage.priceHighLow();
+        filterPage.priceLowHigh();
     }
 
 
