@@ -11,59 +11,57 @@ import static org.com.helper.Utility.driver;
 
 public class AddProductPage {
 
+    private WebDriverWait wait;
+    private WebElement element;
 
 
-    By back_pack = By.id("add-to-cart-sauce-labs-backpack");
+    By elementBackPack = By.id("add-to-cart-sauce-labs-backpack");
+    By elementBikeLight = By.id("add-to-cart-sauce-labs-bike-light");
+    By elementBoltTshirt = By.id("add-to-cart-sauce-labs-bolt-t-shirt");
+    By elementFleeceJacket = By.id("add-to-cart-sauce-labs-fleece-jacket");
+    By elementBabyTshirt = By.id("add-to-cart-sauce-labs-onesie");
+    By elementLongTshirt = By.id("add-to-cart-test.allthethings()-t-shirt-(red)");
+    By elementShoppingCart = By.xpath ("//span[contains(text(),'')]");
 
-    By bike_light = By.id("add-to-cart-sauce-labs-bike-light");
-
-    By bolt_tshirt = By.id("add-to-cart-sauce-labs-bolt-t-shirt");
-
-    By flecee_jacket = By.id("add-to-cart-sauce-labs-fleece-jacket");
-
-    By baby_tshirt = By.id("add-to-cart-sauce-labs-onesie");
-
-    By long_tshirt = By.id("add-to-cart-test.allthethings()-t-shirt-(red)");
-
-    By shoppping_cart = By.xpath ("//a[contains (@class, 'shopping_cart_link')]");
+    By elementRemove = By.xpath("//button[contains(text(),'Remove')]");
 
 
 
     public void backPack () {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(back_pack));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        element = wait.until(ExpectedConditions.elementToBeClickable(elementBackPack));
 
         element.click();
     }
 
 
     public void bikeLight () {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(bike_light));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        element = wait.until(ExpectedConditions.elementToBeClickable(elementBikeLight));
 
         element.click();
     }
 
 
     public void tShirt () {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(bolt_tshirt));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        element = wait.until(ExpectedConditions.elementToBeClickable(elementBoltTshirt));
 
         element.click();
     }
 
 
     public void jacket () {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(flecee_jacket));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        element = wait.until(ExpectedConditions.elementToBeClickable(elementFleeceJacket));
 
         element.click();
     }
 
 
     public void babyTshirt () {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(baby_tshirt));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        element = wait.until(ExpectedConditions.elementToBeClickable(elementBabyTshirt));
 
         element.click();
     }
@@ -71,17 +69,30 @@ public class AddProductPage {
 
     public void longTshirt () {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(long_tshirt));
+        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(elementLongTshirt));
 
         element.click();
 
     }
 
 
-    public void shoppingCart() {
+    public String shoppingCart() {
+        String text;
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(shoppping_cart));
+        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(elementShoppingCart));
+        text = element.getText();
 
-        element.click();
+        return text;
+    }
+
+
+
+    public String validateRemove() {
+        String text;
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(elementRemove));
+        text = element.getText();
+
+        return text;
     }
 }

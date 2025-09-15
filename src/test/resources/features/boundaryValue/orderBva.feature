@@ -1,13 +1,19 @@
 
-@test
-Feature: no input postal code
 
 @test
-Scenario: postal code
+Feature: BVA no input profile customer First Name Last Name and postal code
+
+@test
+Scenario Outline: Test BVA no input profile customer First Name Last Name and postal code
 And input "standard_user" and "secret_sauce"
 Then click button login
 And click add to cart "Sauce Labs Backpack"
-When see product at shopping cart
+When click shopping cart
 And the checkout button  is showed, click it
 And the text First Name "" Last Name "" Postal Code "" is showed input it
-Then click continue button
+And click continue button
+Then validate BVA "<message>"
+
+  Examples:
+  |           message             |
+  | Error: First Name is required |

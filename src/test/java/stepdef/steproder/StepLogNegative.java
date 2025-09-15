@@ -1,19 +1,24 @@
-package org.com.stepdef.steproder;
+package stepdef.steproder;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.com.pages.addpage.AddProductPage;
+import org.com.pages.loginpage.LoginPage;
 import org.com.pages.orderpage.OrderPage;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class StepLogNegative {
 
     private AddProductPage addProductPage;
     private OrderPage checkoutPage;
+    private LoginPage loginPage;
 
 
     public StepLogNegative(){
-        this.addProductPage = new AddProductPage();
-        this.checkoutPage = new OrderPage();
+        addProductPage = new AddProductPage();
+        checkoutPage = new OrderPage();
+        loginPage = new LoginPage();
     }
 
 
@@ -29,7 +34,6 @@ public class StepLogNegative {
     }
 
 
-
     @And("the text First Name {string} Last Name {string} Postal Code {string} is showed input it")
     public void theTextFirstNameLastNamePostalCodeIsShowedInputIt(String firstname, String lastname, String postalcode) {
         checkoutPage.firstName(firstname);
@@ -38,7 +42,7 @@ public class StepLogNegative {
     }
 
 
-    @Then("click continue button")
+    @And("click continue button")
     public void clickContinueButton() {
         checkoutPage.continueCheckout();
 
@@ -50,21 +54,33 @@ public class StepLogNegative {
         addProductPage.shoppingCart();
     }
 
+
     @And("click remove it")
     public void clickRemoveIt() {
         checkoutPage.removeProduct();
     }
+
 
     @And("click finish button")
     public void clickFinishButton() {
         checkoutPage.finishButton();
     }
 
+
     @Then("the result is showed text {string}")
-    public void theResultIsShowedText(String finish) {
-        checkoutPage.finishOrder();
+    public void theResultIsShowedText(String expectedMessage) {
+        String actualFirstMessage = checkoutPage.finishOrder(expectedMessage);
+
+        assertEquals(expectedMessage, actualFirstMessage);
+        System.out.println("Result \n" + actualFirstMessage + "\n");
     }
 
 
+    @Then("validate BVA {string}")
+    public void validateBVA(String expectedMessage) {
+        String actualMessage = loginPage.validateMessageBva();
+        assertEquals(expectedMessage, actualMessage, "Failed message");
+        System.out.println(actualMessage);
+    }
 }
 

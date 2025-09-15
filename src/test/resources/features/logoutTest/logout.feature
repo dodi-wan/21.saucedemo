@@ -15,3 +15,4 @@ Feature: Logout Automation
     And verify on homepage
     When click menu
     And click logout button
+    Then Verify already logout

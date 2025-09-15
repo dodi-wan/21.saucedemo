@@ -12,20 +12,18 @@ import static org.com.helper.Utility.driver;
 
 public class RemovePage {
 
-
-    By removeBack_pack = By.id("remove-sauce-labs-backpack");
-
-    By removeBike_light = By.id("remove-sauce-labs-bike-light");
-
-    By removeBolt_tshirt = By.id("remove-sauce-labs-bolt-t-shirt");
-
-    By remove_flecee_jacket = By.id ("remove-sauce-labs-fleece-jacket");
-
-    By remove_baby_tshirt = By.id("remove-sauce-labs-onesie");
-
-    By remove_long_tshirt = By.id("remove-test.allthethings()-t-shirt-(red)");
+    private WebDriverWait wait;
+    private WebElement element;
 
 
+    By elementRemoveBackpack = By.id("remove-sauce-labs-backpack");
+    By elementRemoveBikeLight = By.id("remove-sauce-labs-bike-light");
+    By elementRemoveBoltTshirt = By.id("remove-sauce-labs-bolt-t-shirt");
+    By elementRemoveFleeceJacket = By.id ("remove-sauce-labs-fleece-jacket");
+    By elementRemoveBabyTshirt = By.id("remove-sauce-labs-onesie");
+    By elementRemoveLongTshirt = By.id("remove-test.allthethings()-t-shirt-(red)");
+
+    By titleRemoveBackPack = By.xpath("/html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/button[1]");
 
 
 
@@ -33,7 +31,7 @@ public class RemovePage {
 
         try {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-            WebElement element = wait.until(ExpectedConditions.elementToBeClickable(removeBack_pack));
+            WebElement element = wait.until(ExpectedConditions.elementToBeClickable(elementRemoveBackpack));
 
             element.click();
 
@@ -51,7 +49,7 @@ public class RemovePage {
 
         try {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-            WebElement element = wait.until(ExpectedConditions.elementToBeClickable(removeBike_light));
+            WebElement element = wait.until(ExpectedConditions.elementToBeClickable(elementRemoveBikeLight));
 
             element.click();
 
@@ -69,7 +67,7 @@ public class RemovePage {
 
        try {
            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-           WebElement element = wait.until(ExpectedConditions.elementToBeClickable(removeBolt_tshirt));
+           WebElement element = wait.until(ExpectedConditions.elementToBeClickable(elementRemoveBoltTshirt));
 
            element.click();
 
@@ -86,7 +84,7 @@ public class RemovePage {
 
         try {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-            WebElement element = wait.until(ExpectedConditions.elementToBeClickable(remove_flecee_jacket));
+            WebElement element = wait.until(ExpectedConditions.elementToBeClickable(elementRemoveFleeceJacket));
 
             element.click();
 
@@ -103,7 +101,7 @@ public class RemovePage {
 
         try {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-            WebElement element = wait.until(ExpectedConditions.elementToBeClickable(remove_baby_tshirt));
+            WebElement element = wait.until(ExpectedConditions.elementToBeClickable(elementRemoveBabyTshirt));
 
             element.click();
 
@@ -120,7 +118,7 @@ public class RemovePage {
 
         try {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-            WebElement element = wait.until(ExpectedConditions.elementToBeClickable(remove_long_tshirt));
+            WebElement element = wait.until(ExpectedConditions.elementToBeClickable(elementRemoveLongTshirt));
 
             element.click();
 
@@ -130,5 +128,16 @@ public class RemovePage {
         } catch (Exception e) {
             System.out.println("Tiba-tiba terjadi error " + e.getMessage());
         }
+    }
+
+
+    public String getRemoveBackPack() {
+        String text;
+
+        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        element = wait.until(ExpectedConditions.visibilityOfElementLocated(titleRemoveBackPack));
+        text = element.getText();
+
+        return text;
     }
 }

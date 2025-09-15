@@ -3,7 +3,7 @@
 ## Task 21 Jayjay
 
 
-### Automation Framework: Web UI + API (Cucumber + Java + Gradle)
+### Automation Framework: Web UI (Cucumber + Java + Gradle)
 #### Framework untuk automation testing web (saucedemo).
 
 ##### overview:
@@ -29,6 +29,7 @@
  ```markdown
    | Folder/File                    | Deskripsi                                                                                                                                                                                                                                   |
    |--------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+<<<<<<< HEAD
    | `.github/workflows/`           | Konfigurasi GitHub Actions CI/CD, file ci-saucedemo.yml              |
    | `src/main/java/org/com/helper` | helper for web setup browser, setting browser chrome, close browser |
    | `src/main/java/org/com/stepdef`| langkah untuk menjalankan file gherkin disebut stepdef atau 'glue code' pada tahap ini akan memanggil class method page object model di repo atau folder local src/main/java/org/com/pages menyesuaikan behaviour scenario |
@@ -37,6 +38,16 @@
    | `src/test/java/hooks`          | tujuannya untuk menjalankan kode sebelum dan sesudah atau seluruh suite test, agar clean dan terorganisir. seperti menyiapkan url, driver, close connection database dan test tidak terpengaruh dengan test sebelumnya    |
    | `src/test/java/runnerTest`     | untuk menjalankan test secara keseluruhan, per/scenario, beberapa test dengan anotasi. tujuannya untuk memberikan visual hasil test dan memberikan perintah untuk membuat report seperti; allure, cucumber json, html dan sebagainya. |
    | `build.gradle`                 | depedensi konfigurasi Java, Junit, cucumber, web driver manager, selenium, allure and else                                                                                                                                                  |
+=======
+   | `.github/workflows/`           | Konfigurasi GitHub Actions CI/CD, file ci-saucedemo.yml                                                                                                                                                                                     |
+   | `src/main/java/org/com/helper` | helper for web setup browser, setting browser chrome, close browser                                                                                                                                                                         |
+   | `src/main/java/org/com/stepdef`| langkah untuk menjalankan file gherkin disebut stepdef atau 'glue code' pada tahap ini akan memanggil class method page object model di repo atau folder local src/main/java/org/com/pages menyesuaikan behaviour scenario                  |
+   | `src/main/java/org/com/pages`  | berisikan file class java berisikan method locator element, notification, third party, filter, dsb. Tujuannya sebagai ruang isolasi pemisah tugas masing-masing class                                                                       |
+   | `src/test/resources/features`  | memebuat scenario secara terpisah dengan pendekatan seperti end-user bercerita layaknya kondisi aktual, jika a apakah outputnya a, atau b. seharusnya outputnya c tetaoi a dan sebagainya                                                   |
+   | `src/test/java/hooks`          | tujuannya untuk menjalankan kode sebelum dan sesudah atau seluruh suite test, agar clean dan terorganisir. seperti menyiapkan url, driver, close connection database dan test tidak terpengaruh dengan test sebelumnya                      |
+   | `src/test/java/runnerTest`     | untuk menjalankan test secara keseluruhan, per/scenario, beberapa test dengan anotasi. tujuannya untuk memberikan visual hasil test dan memberikan perintah untuk membuat report seperti; allure, cucumber json, html dan sebagainya.       |
+   | `build.gradle`                 | Konfigurasi, task run Gradle                                                                                                                                                                                                                |
+>>>>>>> 90a8d2e (update data)
 ```
 
 ### Setup & Run

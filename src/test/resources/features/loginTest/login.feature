@@ -10,8 +10,9 @@ Feature: Login Automation
 
   @test
   Scenario Outline: login swag labs user credential
-    And input "<Accepted usernames are>" and "<Password for all users>"
-    Then click button login
+    Given input "<Accepted usernames are>" and "<Password for all users>"
+    And click button login
+    Then verify login
     Examples:
       | Accepted usernames are       | Password for all users     |
       | standard_user                | secret_sauce               |
@@ -24,6 +25,6 @@ Feature: Login Automation
   @test
   Scenario: login username has been locked
 
-      And input "locked_out_user" and "secret_sauce"
-      Then click button login
-      Given message "Epic sadface: Sorry, this user has been locked out."
+    Given input "locked_out_user" and "secret_sauce"
+    And click button login
+    Then message "Epic sadface: Sorry, this user has been locked out."

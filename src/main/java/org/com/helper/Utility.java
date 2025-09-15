@@ -7,8 +7,6 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 import java.time.Duration;
-import java.util.HashMap;
-import java.util.Map;
 
 public class Utility {
 

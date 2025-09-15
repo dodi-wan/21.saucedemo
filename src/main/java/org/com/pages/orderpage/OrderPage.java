@@ -12,27 +12,34 @@ import static org.com.helper.Utility.driver;
 
 public class OrderPage {
 
+    private WebDriverWait wait;
+    private WebElement element;
 
-    By remove_product = By.id("remove-sauce-labs-backpack");
+
+    By elementRemoveProduct = By.id("remove-sauce-labs-backpack");
 
     By checkout = By.id("checkout");
 
-    By first_name = By.xpath("//input[@data-test = 'firstName']");
+    By elementFirstName = By.xpath("//input[@data-test = 'firstName']");
 
-    By last_name = By.id("last-name");
+    By elementLastName = By.id("last-name");
 
-    By postal_code = By.xpath("//input[@placeholder=\"Zip/Postal Code\"]");
+    By elementPostalCode = By.xpath("//input[@placeholder=\"Zip/Postal Code\"]");
 
-    By continue_checkout = By.id("continue");
+    By elementContinueCheckout = By.id("continue");
 
-    By finish_button = By.id("finish");
+    By elementFinishButton = By.id("finish");
 
-    By order_finish =  By.xpath("//h2[@data-test = 'complete-header']");
+    By elementOrderFinish =  By.xpath("(//h2[normalize-space()='Thank you for your order!'])[1]");
+    By elementText1 = By.xpath("(//div[normalize-space()='Your order has been dispatched, and will arrive just as fast as the pony can get there!'])");
+    By messageOrder (String message) {
+        return By.xpath("//*[contains (text (), '" + message + "' )]");
+    }
 
 
 
     public void removeProduct(){
-        driver.findElement(remove_product).click();
+        driver.findElement(elementRemoveProduct).click();
     }
 
     public void yourCart(){
@@ -52,29 +59,43 @@ public class OrderPage {
 
 
     public void firstName(String firstname){
-        driver.findElement(first_name).sendKeys(firstname);
+        driver.findElement(elementFirstName).sendKeys(firstname);
     }
 
 
     public void lastName(String lastname) {
-        driver.findElement(last_name).sendKeys(lastname);
+        driver.findElement(elementLastName).sendKeys(lastname);
     }
 
 
     public void postalCode(String postalcode){
-        driver.findElement(postal_code).sendKeys(postalcode);
-//
+        driver.findElement(elementPostalCode).sendKeys(postalcode);
     }
 
     public void continueCheckout() {
-        driver.findElement(continue_checkout).click();
+        driver.findElement(elementContinueCheckout).click();
     }
 
     public void finishButton(){
-        driver.findElement(finish_button).click();
+        driver.findElement(elementFinishButton).click();
     }
 
-    public void finishOrder(){
-        driver.findElement(order_finish).isDisplayed();
+    public String finishOrder(String message){
+        String text;
+        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        element = wait.until(ExpectedConditions.visibilityOfElementLocated(messageOrder(message)));
+        text = element.getText();
+
+        return text;
+    }
+
+
+    public String finishTextOrder(String message){
+        String text;
+        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        element = wait.until(ExpectedConditions.visibilityOfElementLocated(messageOrder(message)));
+        text = element.getText();
+
+        return text;
     }
 }

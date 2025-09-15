@@ -14,4 +14,4 @@ Feature: Test Automation remove add cart product
     Then click button login
     And click product
     Then click remove product
-    When see product at shopping cart
+    Then validate has been remove

@@ -6,14 +6,14 @@ Feature: Test BVA username and password
 
   Description:
     boundary value input username minimum 8 character. Expected: message error, input username less 8 character
-    boundary value input username max 21 character. Expected: if input username less 21 character
+    boundary value input username max 21 character. Expected: if input username more than 21 character
     message show "performance_glitch_user"
 
   @test
   Scenario Outline: BVA login username and password
     And input "<Accepted usernames are>" and "<Password for all users>"
-    Then click button login
-    Given message "<message>"
+    And click button login
+    Then validate "<message>"
 
 Examples:
       | Accepted usernames are | Password for all users | message                                                                  |
@@ -22,4 +22,3 @@ Examples:
       | standard_user          | secret_sauc            | Epic sadface: Username and password do not match any user in this service|
       | standard_user          | secret_saucer          | Epic sadface: Username and password do not match any user in this service|
       |                        |                        | Epic sadface: Username is required                                       |
-
