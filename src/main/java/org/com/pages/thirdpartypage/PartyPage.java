@@ -91,47 +91,47 @@ public class PartyPage {
     }
 
 
-    public String storeLinkedin() {
-        String text = null;
+    public boolean storeLinkedin() {
+
         try {
             wait = new WebDriverWait(driver, Duration.ofSeconds(15));
             element = wait.until(ExpectedConditions.visibilityOfElementLocated(joinLinkedin));
-            text = element.getText();
+            element.getText();
         } catch (TimeoutException t) {
             System.out.println("result " + t.getMessage());
         } catch (Exception e) {
             System.out.println("result " + e.getMessage());
         }
-        return text;
+        return true;
     }
 
 
-    public String validateLinkedin() {
-        String text = null;
+    public boolean validateLinkedin() {
+
         try {
             wait = new WebDriverWait(driver, Duration.ofSeconds(15));
             element = wait.until(ExpectedConditions.visibilityOfElementLocated(titleLinkedin));
-            text = element.getText();
+            element.getText();
         } catch (TimeoutException t) {
             System.out.println("result " + t.getMessage());
         } catch (Exception e) {
             System.out.println("result " + e.getMessage());
         }
-        return text;
+        return true;
     }
 
 
-    public String appLinkedin(){
-        String text = null;
+    public boolean appLinkedin(){
+
         try{
             wait = new WebDriverWait(driver, Duration.ofSeconds(15));
             element = wait.until(ExpectedConditions.visibilityOfElementLocated(linkedinApp));
-            text = element.getText();
+            element.getText();
         } catch (TimeoutException t) {
             System.out.println("result " + t.getMessage());
         } catch (Exception e) {
             System.out.println("result " + e.getMessage());
         }
-        return text;
+        return true;
     }
 }

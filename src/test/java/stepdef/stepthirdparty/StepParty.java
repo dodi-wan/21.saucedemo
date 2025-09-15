@@ -7,6 +7,7 @@ import org.com.pages.thirdpartypage.PartyPage;
 
 import static org.com.helper.Utility.driver;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class StepParty {
 
@@ -80,13 +81,14 @@ public class StepParty {
 
     @Then("validate homepage linkedin")
     public void validateHomepageLinkedin() {
-        String validateStoreLinkedin = partyPage.storeLinkedin();
-        String validateTitle = partyPage.validateLinkedin();
-        String validateAppLinkedin = partyPage.appLinkedin();
+        boolean validateStoreLinkedin = partyPage.storeLinkedin();
+        boolean validateTitle = partyPage.validateLinkedin();
+        boolean validateAppLinkedin = partyPage.appLinkedin();
 
-        assertEquals("Don’t have the app? Get it in the Microsoft Store.", validateStoreLinkedin);
-        assertEquals("LinkedIn is better on the app", validateTitle);
-        assertEquals("Open the app", validateAppLinkedin);
+
+        assertTrue(validateStoreLinkedin, "Don’t have the app? Get it in the Microsoft Store.");
+        assertTrue(validateTitle, "LinkedIn is better on the app");
+        assertTrue(validateAppLinkedin, "Open the app");
 
         System.out.println("Result === " + validateStoreLinkedin + " ===");
         System.out.println("Result === " + validateTitle + " ===");
