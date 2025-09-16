@@ -7,25 +7,15 @@ import org.com.pages.bvapage.BvaPage;
 
 public class StepBva {
 
-    BvaPage bvaPage;
+    private BvaPage bvaPage;
 
     public StepBva() {
         bvaPage = new BvaPage();
     }
 
 
-
     @When("click shopping cart")
     public void clickShoppingCart() {
         bvaPage.clickShopCart();
     }
-
-
-
-    @Then("validate BVA")
-    public void validateBVA() {
-
-    }
-
-
 }

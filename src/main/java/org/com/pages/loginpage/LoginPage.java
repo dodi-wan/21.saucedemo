@@ -60,7 +60,7 @@ public class LoginPage {
 
 
 
-    public String DescValidate() {
+    public String descValidate() {
         String text;
 
         wait = new WebDriverWait(driver, Duration.ofSeconds(5));

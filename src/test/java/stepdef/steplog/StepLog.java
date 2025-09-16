@@ -55,10 +55,16 @@ public class StepLog {
 
     @Then("verify login")
     public void verifyLogin() {
-       assertEquals("Sauce Labs Backpack",  loginPage.validateBackPack());
+       String validateFirst = loginPage.validateBackPack();
+       String validateSecond = loginPage.descValidate();
+       String validateThird = loginPage.productValidate();
+
+       assertEquals("Sauce Labs Backpack", validateFirst);
        assertEquals("carry.allTheThings() with the sleek, streamlined Sly " +
                "Pack that melds uncompromising style with unequaled laptop and tablet protection.",
-               loginPage.DescValidate());
-       assertEquals("Products", loginPage.productValidate());
+               validateSecond);
+       assertEquals("Products", validateThird);
+
+       System.out.println("Result: \n" + validateFirst + "\n" + validateSecond + "\n" + validateThird);
     }
 }

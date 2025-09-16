@@ -39,11 +39,9 @@ public class FilterPage {
     }
 
 
-
     public void filterNameAZ () {
         driver.findElement(sortNameAZ).click();
     }
-
 
 
     public String validateAz() {
@@ -54,7 +52,6 @@ public class FilterPage {
 
         return text;
     }
-
 
 
     public String validateSortAz() {
@@ -71,7 +68,6 @@ public class FilterPage {
     public void filterNameZA () {
         driver.findElement(sortNameZA).click();
     }
-
 
 
     public String validateZa() {

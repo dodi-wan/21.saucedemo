@@ -3,7 +3,6 @@ package org.com.pages.logoutpage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.devtools.v136.network.model.DataReceived;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -28,9 +27,6 @@ public class LogoutPage {
     By elementTitle = By.xpath("(//div[@class='login_logo'])[1]");
 
 
-    public void validate_login() {
-        driver.findElement(homepageLogin).isDisplayed();
-    }
 
 
     public void menu_bar() {

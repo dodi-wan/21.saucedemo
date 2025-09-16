@@ -127,15 +127,14 @@
       <recent name="C:\Users\Dodse\IdeaProjects\demoWagLabs\src\test\resources\features\login" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: Test integration linkedin homepage">
-    <configuration name="Scenario: Test Filter price high to low" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Gradle.21.Tugas-Selenium-UI [test]">
+    <configuration name="Feature: facebook" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/filterProductTest/filterProductPriceHiLo.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/integrationTest/facebook.feature" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="21.Tugas-Selenium-UI.test" />
-      <option name="NAME_FILTER" value="^Test Filter price high to low$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Test Filter price high to low$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Test Filter price high to low" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: facebook" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -147,14 +146,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Test Filter price low to high" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Test integration Facebook homepage" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/filterProductTest/filterProductPriceLoHi.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/integrationTest/facebook.feature" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="21.Tugas-Selenium-UI.test" />
-      <option name="NAME_FILTER" value="^Test Filter price low to high$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Test Filter price low to high$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Test Filter price low to high" />
+      <option name="NAME_FILTER" value="^Test integration Facebook homepage$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Test integration Facebook homepage$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Test integration Facebook homepage" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -166,33 +165,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Test integration linkedin homepage" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/integrationTest/linkedin.feature" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="21.Tugas-Selenium-UI.test" />
-      <option name="NAME_FILTER" value="^Test integration linkedin homepage$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Test integration linkedin homepage$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Test integration linkedin homepage" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Scenario: login swag labs user credential" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: login username credential passed login" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/loginTest/login.feature" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="21.Tugas-Selenium-UI.test" />
-      <option name="NAME_FILTER" value="^login swag labs user credential$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^login swag labs user credential$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: login swag labs user credential" />
+      <option name="NAME_FILTER" value="^login username credential passed login$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^login username credential passed login$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: login username credential passed login" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -203,6 +183,28 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="21.Tugas-Selenium-UI [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
     </configuration>
     <configuration name="Runner" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -230,11 +232,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Scenario: Test integration linkedin homepage" />
+        <item itemvalue="Gradle.21.Tugas-Selenium-UI [test]" />
         <item itemvalue="Gradle.Runner" />
-        <item itemvalue="Cucumber Java.Scenario: Test Filter price high to low" />
-        <item itemvalue="Cucumber Java.Scenario: Test Filter price low to high" />
-        <item itemvalue="Cucumber Java.Scenario: login swag labs user credential" />
+        <item itemvalue="Cucumber Java.Scenario: login username credential passed login" />
+        <item itemvalue="Cucumber Java.Scenario: Test integration Facebook homepage" />
+        <item itemvalue="Cucumber Java.Feature: facebook" />
       </list>
     </recent_temporary>
   </component>

@@ -18,17 +18,21 @@ allure {
 
 
     dependencies {
+        //Junit 5
         testImplementation platform('org.junit:junit-bom:5.10.0')
         testImplementation 'org.junit.jupiter:junit-jupiter'
         testImplementation 'org.junit.platform:junit-platform-suite:1.12.0'
 
+        //cucumber
         implementation group: 'io.cucumber', name: 'cucumber-java', version: '7.21.1'
         testImplementation group: 'io.cucumber', name: 'cucumber-junit-platform-engine', version: '7.21.1'
         testImplementation("net.masterthought:cucumber-reporting:5.10.1")
 
+        //selenium + webdrivermanager
         implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.34.0'
         implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '5.9.3'
 
+        //allure for report
         implementation 'io.qameta.allure:allure-bom:2.29.1'
         testImplementation 'io.qameta.allure:allure-junit5:2.29.1'
         implementation 'io.qameta.allure:allure-cucumber7-jvm:2.29.1'
@@ -36,13 +40,15 @@ allure {
     }
 
 
-//in terminal ./gradlew test
+//in terminal ./gradlew clean test
 test {
     useJUnitPlatform()
     testLogging {
         events "passed", "skipped", "failed"
     }
 }
+
+
 
 
 

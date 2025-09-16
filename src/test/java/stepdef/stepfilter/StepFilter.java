@@ -10,8 +10,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class StepFilter {
 
-    FilterPage filterPage;
-    LoginPage loginPage;
+    private FilterPage filterPage;
+    private LoginPage loginPage;
 
 
     public StepFilter() {

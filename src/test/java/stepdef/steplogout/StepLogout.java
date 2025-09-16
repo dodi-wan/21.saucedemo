@@ -16,11 +16,6 @@ public class StepLogout {
     }
 
 
-    @And("verify on homepage")
-    public void verifyOnHomepage() {
-        logoutPage.validate_login();
-    }
-
 
     @When("click menu")
     public void clickMenu() {

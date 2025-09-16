@@ -9,7 +9,7 @@ Feature: Login Automation
     error_user, visual_user can login and locked_out_user cannot login
 
   @test
-  Scenario Outline: login swag labs user credential
+  Scenario Outline: login username credential passed login
     Given input "<Accepted usernames are>" and "<Password for all users>"
     And click button login
     Then verify login
@@ -23,8 +23,7 @@ Feature: Login Automation
 
 
   @test
-  Scenario: login username has been locked
-
+  Scenario: login username credential has been locked
     Given input "locked_out_user" and "secret_sauce"
     And click button login
     Then message "Epic sadface: Sorry, this user has been locked out."

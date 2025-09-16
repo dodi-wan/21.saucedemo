@@ -1,11 +1,11 @@
 
 
 @test
-Feature: Test Automation login negative & boundary
+Feature: Automation login negative username and password
 
 
   @test
-  Scenario Outline: login negative
+  Scenario Outline: Test login automation use negative username and password
     And input "<Accepted usernames are>" and "<Password for all users>"
     And click button login
     Then validate "<message>"

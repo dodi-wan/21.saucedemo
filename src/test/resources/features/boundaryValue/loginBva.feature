@@ -1,7 +1,7 @@
 
 
 @test
-Feature: Test BVA username and password
+Feature: Boundary Value Analysis username and password
 
 
   Description:
@@ -10,7 +10,7 @@ Feature: Test BVA username and password
     message show "performance_glitch_user"
 
   @test
-  Scenario Outline: BVA login username and password
+  Scenario Outline: Test BVA login username and password
     And input "<Accepted usernames are>" and "<Password for all users>"
     And click button login
     Then validate "<message>"

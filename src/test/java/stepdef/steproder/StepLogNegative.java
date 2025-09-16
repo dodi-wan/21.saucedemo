@@ -79,7 +79,7 @@ public class StepLogNegative {
     @Then("validate BVA {string}")
     public void validateBVA(String expectedMessage) {
         String actualMessage = loginPage.validateMessageBva();
-        assertEquals(expectedMessage, actualMessage, "Failed message");
+        assertEquals(expectedMessage, actualMessage);
         System.out.println(actualMessage);
     }
 }
